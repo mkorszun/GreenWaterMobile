@@ -2,19 +2,19 @@ package com.greenwatermobile.model;
 
 public class Metrics {
 
-    private int daily;
-    private int weekly;
-    private int monthly;
-    private int yearly;
+    private double daily;
+    private double weekly;
+    private double monthly;
+    private double yearly;
 
-    public Metrics(int daily, int weekly, int monthly, int yearly) {
+    public Metrics(double daily, double weekly, double monthly, double yearly) {
         this.daily = daily;
         this.weekly = weekly;
         this.monthly = monthly;
         this.yearly = yearly;
     }
 
-    public int getDaily() {
+    public double getDaily() {
         return daily;
     }
 
@@ -22,7 +22,7 @@ public class Metrics {
         this.daily = daily;
     }
 
-    public int getWeekly() {
+    public double getWeekly() {
         return weekly;
     }
 
@@ -30,7 +30,7 @@ public class Metrics {
         this.weekly = weekly;
     }
 
-    public int getMonthly() {
+    public double getMonthly() {
         return monthly;
     }
 
@@ -38,7 +38,7 @@ public class Metrics {
         this.monthly = monthly;
     }
 
-    public int getYearly() {
+    public double getYearly() {
         return yearly;
     }
 

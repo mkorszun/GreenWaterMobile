@@ -13,10 +13,12 @@ import com.greenwatermobile.R;
 import com.greenwatermobile.bus.EventBus;
 import com.greenwatermobile.model.Metrics;
 import com.squareup.otto.Subscribe;
+import java.text.DecimalFormat;
 
 public class FlowFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
+    private DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
     public static FlowFragment newInstance(int sectionNumber) {
         FlowFragment fragment = new FlowFragment();
@@ -57,10 +59,10 @@ public class FlowFragment extends Fragment {
             TextView monthUsage = (TextView) getActivity().findViewById(R.id.month_usage);
             TextView yearUsage = (TextView) getActivity().findViewById(R.id.year_usage);
 
-            dayUsage.setText(Integer.toString(metrics.getDaily()));
-            weekUsage.setText(Integer.toString(metrics.getWeekly()));
-            monthUsage.setText(Integer.toString(metrics.getMonthly()));
-            yearUsage.setText(Integer.toString(metrics.getYearly()));
+            dayUsage.setText(decimalFormat.format(metrics.getDaily() / 1000)+" L");
+            weekUsage.setText(decimalFormat.format(metrics.getWeekly() / 1000)+" L");
+            monthUsage.setText(decimalFormat.format(metrics.getMonthly() / 1000)+" L");
+            yearUsage.setText(decimalFormat.format(metrics.getYearly() / 1000)+" L");
         }
     }
 
