@@ -20,8 +20,9 @@ public class APIFactory {
     }
 
     public static API build(String url) {
-        RestAdapter restAdapter =
-            new RestAdapter.Builder().setErrorHandler(ERROR_HANDLER).setEndpoint(url).build();
+        RestAdapter restAdapter = new RestAdapter.Builder()
+            // .setLogLevel(RestAdapter.LogLevel.FULL)
+            .setErrorHandler(ERROR_HANDLER).setEndpoint(url).build();
         return restAdapter.create(API.class);
     }
 }

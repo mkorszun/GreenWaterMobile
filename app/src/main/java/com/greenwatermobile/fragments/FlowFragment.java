@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.greenwatermobile.MainActivity;
 import com.greenwatermobile.R;
 import com.greenwatermobile.bus.EventBus;
-import com.greenwatermobile.model.VariableResponse;
+import com.greenwatermobile.model.Metrics;
 import com.squareup.otto.Subscribe;
 
 public class FlowFragment extends Fragment {
@@ -50,10 +50,17 @@ public class FlowFragment extends Fragment {
     }
 
     @Subscribe
-    public void readFlowSuccess(VariableResponse response) {
+    public void readFlowSuccess(Metrics metrics) {
         if (isVisible()) {
-            TextView textView = (TextView) getActivity().findViewById(R.id.section_label);
-            textView.setText(Integer.toString(response.getResult()));
+            TextView dayUsage = (TextView) getActivity().findViewById(R.id.day_usage);
+            TextView weekUsage = (TextView) getActivity().findViewById(R.id.week_usage);
+            TextView monthUsage = (TextView) getActivity().findViewById(R.id.month_usage);
+            TextView yearUsage = (TextView) getActivity().findViewById(R.id.year_usage);
+
+            dayUsage.setText(Integer.toString(metrics.getDaily()));
+            weekUsage.setText(Integer.toString(metrics.getWeekly()));
+            monthUsage.setText(Integer.toString(metrics.getMonthly()));
+            yearUsage.setText(Integer.toString(metrics.getYearly()));
         }
     }
 
