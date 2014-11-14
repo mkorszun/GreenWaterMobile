@@ -18,8 +18,8 @@ import java.text.DecimalFormat;
 public class FlowFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
-    private static final DecimalFormat FLOW_FORMAT = new DecimalFormat("#.0");
-    private static final DecimalFormat COST_FORMAT = new DecimalFormat("0.00");
+    private static final DecimalFormat FLOW_FORMAT = new DecimalFormat("#0.0");
+    private static final DecimalFormat COST_FORMAT = new DecimalFormat("#0.00");
 
     public static FlowFragment newInstance(int sectionNumber) {
         FlowFragment fragment = new FlowFragment();

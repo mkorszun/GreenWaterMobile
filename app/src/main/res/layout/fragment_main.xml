@@ -18,7 +18,7 @@
         <TextView
             android:text="0.0 L"
             android:textSize="100dp"
-            android:textColor="#545454"
+            android:textColor="#402B2B"
             android:layout_gravity="center_horizontal"
             android:id="@+id/day_usage"
             android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
         <TextView
             android:text="0.0$"
             android:textSize="100dp"
-            android:textColor="#545454"
+            android:textColor="#402B2B"
             android:layout_gravity="center_horizontal"
             android:id="@+id/day_cost"
             android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
 
         <View
             android:layout_width="fill_parent"
-            android:layout_height="2dp"
+            android:layout_height="4dp"
             android:background="#545454"/>
 
         <TableRow
@@ -51,9 +51,10 @@
 
                 <TextView
                     android:padding="10dp"
+                    android:textStyle="bold"
                     android:text="Week"
                     android:textSize="30dp"
-                    android:textColor="#545454"
+                    android:textColor="#312222"
                     android:id="@+id/week_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -64,7 +65,7 @@
                     android:layout_below="@+id/week_label"
                     android:text="0.0 L"
                     android:textSize="25dp"
-                    android:textColor="#545454"
+                    android:textColor="#393131"
                     android:id="@+id/week_usage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -74,7 +75,7 @@
                     android:layout_below="@+id/week_usage"
                     android:text="0.0 $"
                     android:textSize="25dp"
-                    android:textColor="#545454"
+                    android:textColor="#645757"
                     android:id="@+id/week_cost"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -86,9 +87,10 @@
 
                 <TextView
                     android:padding="10dp"
+                    android:textStyle="bold"
                     android:text="Month"
                     android:textSize="30dp"
-                    android:textColor="#545454"
+                    android:textColor="#312222"
                     android:id="@+id/month_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -99,7 +101,7 @@
                     android:layout_below="@+id/month_label"
                     android:text="0.0 L"
                     android:textSize="25dp"
-                    android:textColor="#545454"
+                    android:textColor="#393131"
                     android:id="@+id/month_usage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -109,7 +111,7 @@
                     android:layout_below="@+id/month_usage"
                     android:text="0.0 $"
                     android:textSize="25dp"
-                    android:textColor="#545454"
+                    android:textColor="#645757"
                     android:id="@+id/month_cost"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -121,9 +123,10 @@
 
                 <TextView
                     android:padding="10dp"
+                    android:textStyle="bold"
                     android:text="Year"
                     android:textSize="30dp"
-                    android:textColor="#545454"
+                    android:textColor="#312222"
                     android:id="@+id/year_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -134,7 +137,7 @@
                     android:layout_below="@+id/year_label"
                     android:text="0.0 L"
                     android:textSize="25dp"
-                    android:textColor="#545454"
+                    android:textColor="#393131"
                     android:id="@+id/year_usage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -144,7 +147,7 @@
                     android:layout_below="@+id/year_usage"
                     android:text="0.0 $"
                     android:textSize="25dp"
-                    android:textColor="#545454"
+                    android:textColor="#645757"
                     android:id="@+id/year_cost"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
