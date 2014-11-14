@@ -16,7 +16,7 @@
         android:layout_alignParentStart="true">
 
         <TextView
-            android:text="sadsa"
+            android:text="0.0 L"
             android:textSize="100dp"
             android:textColor="#545454"
             android:layout_gravity="center_horizontal"
@@ -25,11 +25,11 @@
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:text="0,1$"
+            android:text="0.0$"
             android:textSize="100dp"
             android:textColor="#545454"
             android:layout_gravity="center_horizontal"
-            android:id="@+id/actual_cost"
+            android:id="@+id/day_cost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -39,7 +39,7 @@
             android:background="#545454"/>
 
         <TableRow
-            android:paddingTop="30dp"
+            android:paddingTop="20dp"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,8 +62,8 @@
                     android:padding="10dp"
                     android:textStyle="bold"
                     android:layout_below="@+id/week_label"
-                    android:text="sadsa"
-                    android:textSize="30dp"
+                    android:text="0.0 L"
+                    android:textSize="25dp"
                     android:textColor="#545454"
                     android:id="@+id/week_usage"
                     android:layout_width="wrap_content"
@@ -72,8 +72,8 @@
                 <TextView
                     android:padding="10dp"
                     android:layout_below="@+id/week_usage"
-                    android:text="1,0$"
-                    android:textSize="30dp"
+                    android:text="0.0 $"
+                    android:textSize="25dp"
                     android:textColor="#545454"
                     android:id="@+id/week_cost"
                     android:layout_width="wrap_content"
@@ -97,8 +97,8 @@
                     android:padding="10dp"
                     android:textStyle="bold"
                     android:layout_below="@+id/month_label"
-                    android:text="sadsa"
-                    android:textSize="30dp"
+                    android:text="0.0 L"
+                    android:textSize="25dp"
                     android:textColor="#545454"
                     android:id="@+id/month_usage"
                     android:layout_width="wrap_content"
@@ -107,8 +107,8 @@
                 <TextView
                     android:padding="10dp"
                     android:layout_below="@+id/month_usage"
-                    android:text="10,0$"
-                    android:textSize="30dp"
+                    android:text="0.0 $"
+                    android:textSize="25dp"
                     android:textColor="#545454"
                     android:id="@+id/month_cost"
                     android:layout_width="wrap_content"
@@ -132,8 +132,8 @@
                     android:padding="10dp"
                     android:textStyle="bold"
                     android:layout_below="@+id/year_label"
-                    android:text="sadsa"
-                    android:textSize="30dp"
+                    android:text="0.0 L"
+                    android:textSize="25dp"
                     android:textColor="#545454"
                     android:id="@+id/year_usage"
                     android:layout_width="wrap_content"
@@ -142,8 +142,8 @@
                 <TextView
                     android:padding="10dp"
                     android:layout_below="@+id/year_usage"
-                    android:text="100,0$"
-                    android:textSize="30dp"
+                    android:text="0.0 $"
+                    android:textSize="25dp"
                     android:textColor="#545454"
                     android:id="@+id/year_cost"
                     android:layout_width="wrap_content"

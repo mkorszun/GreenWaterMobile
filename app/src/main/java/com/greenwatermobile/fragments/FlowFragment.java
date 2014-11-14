@@ -18,7 +18,8 @@ import java.text.DecimalFormat;
 public class FlowFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
-    private DecimalFormat decimalFormat = new DecimalFormat("#.##");
+    private static final DecimalFormat FLOW_FORMAT = new DecimalFormat("#.0");
+    private static final DecimalFormat COST_FORMAT = new DecimalFormat("0.00");
 
     public static FlowFragment newInstance(int sectionNumber) {
         FlowFragment fragment = new FlowFragment();
@@ -59,10 +60,20 @@ public class FlowFragment extends Fragment {
             TextView monthUsage = (TextView) getActivity().findViewById(R.id.month_usage);
             TextView yearUsage = (TextView) getActivity().findViewById(R.id.year_usage);
 
-            dayUsage.setText(decimalFormat.format(metrics.getDaily() / 1000)+" L");
-            weekUsage.setText(decimalFormat.format(metrics.getWeekly() / 1000)+" L");
-            monthUsage.setText(decimalFormat.format(metrics.getMonthly() / 1000)+" L");
-            yearUsage.setText(decimalFormat.format(metrics.getYearly() / 1000)+" L");
+            TextView dayCost = (TextView) getActivity().findViewById(R.id.day_cost);
+            TextView weekCost = (TextView) getActivity().findViewById(R.id.week_cost);
+            TextView monthCost = (TextView) getActivity().findViewById(R.id.month_cost);
+            TextView yearCost = (TextView) getActivity().findViewById(R.id.year_cost);
+
+            dayUsage.setText(FLOW_FORMAT.format(metrics.getDaily()) + " L");
+            weekUsage.setText(FLOW_FORMAT.format(metrics.getWeekly()) + " L");
+            monthUsage.setText(FLOW_FORMAT.format(metrics.getMonthly()) + " L");
+            yearUsage.setText(FLOW_FORMAT.format(metrics.getYearly()) + " L");
+
+            dayCost.setText(COST_FORMAT.format(metrics.getDayCost()) + " $");
+            weekCost.setText(COST_FORMAT.format(metrics.getWeekCost()) + " $");
+            monthCost.setText(COST_FORMAT.format(metrics.getMonthCost()) + " $");
+            yearCost.setText(COST_FORMAT.format(metrics.getYearCost()) + " $");
         }
     }
 

@@ -2,6 +2,9 @@ package com.greenwatermobile.model;
 
 public class Metrics {
 
+    private static final double FACTOR = 10;
+    private static final double COST_PER_LITER = 0.05;
+
     private double daily;
     private double weekly;
     private double monthly;
@@ -15,38 +18,34 @@ public class Metrics {
     }
 
     public double getDaily() {
-        return daily;
-    }
-
-    public void setDaily(int daily) {
-        this.daily = daily;
+        return daily / FACTOR;
     }
 
     public double getWeekly() {
-        return weekly;
-    }
-
-    public void setWeekly(int weekly) {
-        this.weekly = weekly;
+        return weekly / FACTOR;
     }
 
     public double getMonthly() {
-        return monthly;
-    }
-
-    public void setMonthly(int monthly) {
-        this.monthly = monthly;
+        return monthly / FACTOR;
     }
 
     public double getYearly() {
-        return yearly;
+        return yearly / FACTOR;
     }
 
-    public void setYearly(int yearly) {
-        this.yearly = yearly;
+    public double getDayCost() {
+        return getDaily() * COST_PER_LITER;
     }
 
-    public double costPerLiter() {
-        return 0.005f;
+    public double getWeekCost() {
+        return getWeekly() * COST_PER_LITER;
+    }
+
+    public double getMonthCost() {
+        return getMonthly() * COST_PER_LITER;
+    }
+
+    public double getYearCost() {
+        return getYearly() * COST_PER_LITER;
     }
 }
