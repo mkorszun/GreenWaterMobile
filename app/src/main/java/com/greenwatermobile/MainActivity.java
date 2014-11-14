@@ -58,7 +58,7 @@ public class MainActivity extends Activity implements NavigationFragment.Navigat
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
-            return true;
+            startActivity(new Intent(this, SettingsActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }

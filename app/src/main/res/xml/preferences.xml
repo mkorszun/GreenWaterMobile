@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="THRESHOLDS"
+        android:key="pref_key_storage_settings">
+
+        <CheckBoxPreference
+            android:key="THRESHOLD_ENABLED"
+            android:summary="Enable usage thresholds"
+            android:title="Enable usage thresholds"
+            android:defaultValue="false"/>
+
+        <EditTextPreference
+            android:defaultValue="1000"
+            android:dependency="THRESHOLD_ENABLED"
+            android:inputType="number"
+            android:key="DAILY_THRESHOLD"
+            android:title="Daily usage threshold [L]"
+            />
+
+        <EditTextPreference
+            android:defaultValue="1000"
+            android:dependency="THRESHOLD_ENABLED"
+            android:inputType="number"
+            android:key="WEEKLY_THRESHOLD"
+            android:title="Weekly usage threshold [L]"
+            />
+
+        <EditTextPreference
+            android:defaultValue="1000"
+            android:dependency="THRESHOLD_ENABLED"
+            android:inputType="number"
+            android:key="MONTHLY_THRESHOLD"
+            android:title="Monthly usage threshold [L]"
+            />
+
+        <EditTextPreference
+            android:defaultValue="1000"
+            android:dependency="THRESHOLD_ENABLED"
+            android:inputType="number"
+            android:key="YEARLY_THRESHOLD"
+            android:title="Yearly usage threshold [L]"
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
