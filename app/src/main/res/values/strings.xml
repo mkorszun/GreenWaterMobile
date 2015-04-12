@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">GreenWaterMobile</string>
+    <string name="app_name">eDrop</string>
     <string name="title_section1">Kitchen</string>
     <string name="title_section2">Bathroom</string>
     <string name="title_section3">Overall</string>
