@@ -110,7 +110,7 @@ public class FlowFragment extends Fragment {
     @Subscribe
     public void readFlowError(Exception e) {
         if (isVisible()) {
-            Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_LONG).show();
+            //Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 
