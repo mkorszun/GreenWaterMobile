@@ -5,4 +5,56 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="h1">
+        <item name="android:padding">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">#312222</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="h2">
+        <item name="android:padding">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">#393131</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">0.0 L</item>
+    </style>
+
+    <style name="h3">
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">#645757</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">0.0 $</item>
+    </style>
+
+    <style name="periodic_column">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">#C9EFF0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+
+    <style name="periodic_section_row">
+        <item name="android:paddingTop">30dp</item>
+        <item name="android:stretchColumns">*</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="periodic_section">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:stretchColumns">*</item>
+    </style>
+
 </resources>

@@ -38,121 +38,54 @@
             android:layout_height="4dp"
             android:background="#545454"/>
 
-        <TableRow
-            android:paddingTop="20dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal" android:baselineAligned="false">
+        <TableLayout style="@style/periodic_section">
+            <TableRow style="@style/periodic_section_row">
+                <RelativeLayout style="@style/periodic_column">
+                    <TextView
+                        style="@style/h1"
+                        android:text="Week"
+                        android:id="@+id/week_label"/>
+                    <TextView
+                        style="@style/h2"
+                        android:layout_below="@+id/week_label"
+                        android:id="@+id/week_usage"/>
+                    <TextView
+                        style="@style/h3"
+                        android:layout_below="@+id/week_usage"
+                        android:id="@+id/week_cost"/>
+                </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content">
+                <RelativeLayout style="@style/periodic_column">
+                    <TextView
+                        style="@style/h1"
+                        android:text="Month"
+                        android:id="@+id/month_label"/>
+                    <TextView
+                        style="@style/h2"
+                        android:layout_below="@+id/month_label"
+                        android:id="@+id/month_usage"/>
+                    <TextView
+                        style="@style/h3"
+                        android:layout_below="@+id/month_usage"
+                        android:id="@+id/month_cost"/>
+                </RelativeLayout>
 
-                <TextView
-                    android:padding="10dp"
-                    android:textStyle="bold"
-                    android:text="Week"
-                    android:textSize="30dp"
-                    android:textColor="#312222"
-                    android:id="@+id/week_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:padding="10dp"
-                    android:textStyle="bold"
-                    android:layout_below="@+id/week_label"
-                    android:text="0.0 L"
-                    android:textSize="25dp"
-                    android:textColor="#393131"
-                    android:id="@+id/week_usage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:padding="10dp"
-                    android:layout_below="@+id/week_usage"
-                    android:text="0.0 $"
-                    android:textSize="25dp"
-                    android:textColor="#645757"
-                    android:id="@+id/week_cost"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content">
-
-                <TextView
-                    android:padding="10dp"
-                    android:textStyle="bold"
-                    android:text="Month"
-                    android:textSize="30dp"
-                    android:textColor="#312222"
-                    android:id="@+id/month_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:padding="10dp"
-                    android:textStyle="bold"
-                    android:layout_below="@+id/month_label"
-                    android:text="0.0 L"
-                    android:textSize="25dp"
-                    android:textColor="#393131"
-                    android:id="@+id/month_usage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:padding="10dp"
-                    android:layout_below="@+id/month_usage"
-                    android:text="0.0 $"
-                    android:textSize="25dp"
-                    android:textColor="#645757"
-                    android:id="@+id/month_cost"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content">
-
-                <TextView
-                    android:padding="10dp"
-                    android:textStyle="bold"
-                    android:text="Year"
-                    android:textSize="30dp"
-                    android:textColor="#312222"
-                    android:id="@+id/year_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:padding="10dp"
-                    android:textStyle="bold"
-                    android:layout_below="@+id/year_label"
-                    android:text="0.0 L"
-                    android:textSize="25dp"
-                    android:textColor="#393131"
-                    android:id="@+id/year_usage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:padding="10dp"
-                    android:layout_below="@+id/year_usage"
-                    android:text="0.0 $"
-                    android:textSize="25dp"
-                    android:textColor="#645757"
-                    android:id="@+id/year_cost"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </RelativeLayout>
-        </TableRow>
+                <RelativeLayout style="@style/periodic_column">
+                    <TextView
+                        style="@style/h1"
+                        android:text="Year"
+                        android:id="@+id/year_label"/>
+                    <TextView
+                        style="@style/h2"
+                        android:layout_below="@+id/year_label"
+                        android:id="@+id/year_usage"/>
+                    <TextView
+                        style="@style/h3"
+                        android:layout_below="@+id/year_usage"
+                        android:id="@+id/year_cost"/>
+                </RelativeLayout>
+            </TableRow>
+        </TableLayout>
 
     </LinearLayout>
 
