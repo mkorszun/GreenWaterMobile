@@ -1,42 +1,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity$PlaceholderFragment">
+    style="@style/main_window">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+    <LinearLayout style="@style/metrics_view_background">
 
-        <TextView
-            android:text="0.0 L"
-            android:textSize="100dp"
-            android:textColor="#402B2B"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/day_usage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <RelativeLayout style="@style/current_metrics">
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <TextView
+                style="@style/h0"
+                android:text="0.0 L"
+                android:id="@+id/day_usage"/>
+            <TextView
+                style="@style/h0"
+                android:text="0.0 $"
+                android:layout_below="@+id/day_usage"
+                android:id="@+id/day_cost"/>
+            </RelativeLayout>
+        </RelativeLayout>
 
-        <TextView
-            android:text="0.0$"
-            android:textSize="100dp"
-            android:textColor="#402B2B"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/day_cost"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="4dp"
-            android:background="#545454"/>
+        <View style="@style/separator"/>
 
         <TableLayout style="@style/periodic_section">
             <TableRow style="@style/periodic_section_row">
