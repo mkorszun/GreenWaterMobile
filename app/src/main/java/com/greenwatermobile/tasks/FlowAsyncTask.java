@@ -20,8 +20,8 @@ public class FlowAsyncTask extends AsyncTask<Void, Void, VariableResponse> {
     protected VariableResponse doInBackground(Void... params) {
         API api = APIFactory.build();
         try {
-            return api.readFlowStatus("53ff6c066667574811392167",
-                "6b54cf1b2cdce825b1c42dc18941fc84f2714fd4");
+            return api.readFlowStatus("53ff62066667574836592567",
+                "681cf8726431e6526bc09d78f5fe4182f675db42");
         } catch (APIException e) {
             Log.e("Failed to read flow metric", e.getMessage());
             exception = e;
