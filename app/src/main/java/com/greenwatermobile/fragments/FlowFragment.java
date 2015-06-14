@@ -9,6 +9,10 @@ import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.greenwatermobile.MainActivity;
@@ -40,6 +44,10 @@ public class FlowFragment extends Fragment {
     private TextView weekLabel;
     private TextView monthLabel;
     private TextView yearLabel;
+    private RelativeLayout currentView;
+    private Animation rotation;
+    private boolean animationStarted = false;
+    private Metrics previousMetrics;
 
     public static FlowFragment newInstance(int sectionNumber) {
         FlowFragment fragment = new FlowFragment();
@@ -70,6 +78,11 @@ public class FlowFragment extends Fragment {
         monthLabel = (TextView) view.findViewById(R.id.month_label);
         yearLabel = (TextView) view.findViewById(R.id.year_label);
 
+        currentView = (RelativeLayout) view.findViewById(R.id.current_metrics);
+
+        rotation = AnimationUtils.loadAnimation(getActivity(), R.anim.animation_drawable_background);
+        rotation.setRepeatCount(Animation.INFINITE);
+
         return view;
     }
 
@@ -93,6 +106,16 @@ public class FlowFragment extends Fragment {
     public void readFlowSuccess(Metrics metrics) {
         if (isVisible()) {
 
+            if (!animationStarted && previousMetrics != null && !metrics.equals(previousMetrics)) {
+                animationStarted = true;
+                currentView.startAnimation(rotation);
+            }
+
+            if (animationStarted && metrics.equals(previousMetrics)) {
+                animationStarted = false;
+                currentView.clearAnimation();
+            }
+
             dayUsage.setText(FLOW_FORMAT.format(metrics.getDaily()) + " L");
             weekUsage.setText(FLOW_FORMAT.format(metrics.getWeekly()) + " L");
             monthUsage.setText(FLOW_FORMAT.format(metrics.getMonthly()) + " L");
@@ -104,6 +127,7 @@ public class FlowFragment extends Fragment {
             yearCost.setText(COST_FORMAT.format(metrics.getYearCost()) + " $");
 
             updateColors(metrics);
+            previousMetrics = metrics;
         }
     }
 

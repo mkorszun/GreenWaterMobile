@@ -48,4 +48,20 @@ public class Metrics {
     public double getYearCost() {
         return getYearly() * COST_PER_LITER;
     }
+
+    @Override public boolean equals(Object o) {
+        if (o instanceof Metrics) {
+            Metrics m = (Metrics) o;
+            if (m.daily == this.daily
+                && m.weekly == this.weekly
+                && m.monthly == this.monthly
+                && m.yearly == this.yearly) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        return false;
+    }
 }

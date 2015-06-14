@@ -3,7 +3,15 @@
 
     <LinearLayout style="@style/metrics_view_background">
 
-        <RelativeLayout style="@style/current_metrics">
+        <RelativeLayout
+            style="@style/current_metrics">
+            <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/current_metrics"
+                android:background="@anim/animation_drawable_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
             <RelativeLayout
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
