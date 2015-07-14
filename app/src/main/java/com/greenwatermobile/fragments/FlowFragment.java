@@ -48,6 +48,7 @@ public class FlowFragment extends Fragment {
     private Animation rotation;
     private boolean animationStarted = false;
     private Metrics previousMetrics;
+    private int noUpdates = 0;
 
     public static FlowFragment newInstance(int sectionNumber) {
         FlowFragment fragment = new FlowFragment();
@@ -111,7 +112,11 @@ public class FlowFragment extends Fragment {
                 currentView.startAnimation(rotation);
             }
 
-            if (animationStarted && metrics.equals(previousMetrics)) {
+            if (metrics.equals(previousMetrics)) {
+                noUpdates++;
+            }
+
+            if (noUpdates > 5 && animationStarted && metrics.equals(previousMetrics)) {
                 animationStarted = false;
                 currentView.clearAnimation();
             }
